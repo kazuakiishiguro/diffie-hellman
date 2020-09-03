@@ -1,12 +1,13 @@
 # Diffie Hellman
 
 A portable DH key exchange toy-example.
-:warning: WARNING: This library has not been audited, so please do not use for production code.
+
+:warning: **WARNING**: This library has not been audited, so please do not use for production code.
 
 ## Example
 
 ```rust
-use diffie-hellman::{private_key, public_key, secret};
+use diffie_hellman::{private_key, public_key, secret};
 
 let p: u64 = 11;
 
