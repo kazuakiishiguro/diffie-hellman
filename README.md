@@ -11,7 +11,7 @@ use diffie_hellman::{private_key, public_key, secret};
 
 let p: u64 = 11;
 
-// Assume Alice want to share secret with Bob
+// Assume Alice wants to share secret with Bob
 let priv_a: u64 = 7; // Alice's private key
 let pub_b: u64 = 8; // Bob's public key
 
