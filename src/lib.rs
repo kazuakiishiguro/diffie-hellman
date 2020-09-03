@@ -3,6 +3,8 @@ extern crate rand;
 use rand::{thread_rng, Rng};
 
 pub fn private_key(p: u64) -> u64 {
+    // This may not be cryptographically safe, use
+    // `OsRng` (for example) in production software.
     thread_rng().gen_range(2u64, p - 1)
 }
 
