@@ -18,7 +18,16 @@ pub fn secret(p: u64, b_pub: u64, a: u64) -> u64 {
 
 // compute b^e % m
 fn modpow(b: u64, e: u64, m: u64) -> u64 {
-    (0..e).fold(1, |a, _| (a * b) % m)
+    match e {
+	0 => 1,
+	1 => b,
+        _ => {
+            match e % 2 {
+		0 => modpow(b * b % m, e / 2, m) % m,
+		_ => b * modpow(b, e - 1, m) % m
+	    }
+	}
+    }
 }
 
 #[cfg(test)]
